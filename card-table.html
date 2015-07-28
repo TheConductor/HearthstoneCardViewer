@@ -1,0 +1,22 @@
+  <div ng-repeat="card in cards">
+    <h0
+      ng-hide = "card.collectible == false
+      || hhsCtrl.tab == 0
+      || (card.hero != hhsCtrl.tab && card.hero != 'neutral')
+      || card.category == 'hero'
+      || card.category == 'ability'
+      || (filterCtrl.categoryTab != 0 && card.category != filterCtrl.categoryTab)
+      || (filterCtrl.qualityTab != 0 && card.quality != filterCtrl.qualityTab)">
+
+      <p>===========================</p>
+      <ul>
+        <img src = "hs-images/{{card.id}}.png", height="192" width="128">
+        <li ng-show = "card.name">{{card.name}}</li>
+        <li ng-show = "card.mana">{{"Cost "+card.mana}}</li>
+        <li ng-show = "card.category">{{card.category}}</li>
+        <li ng-show = "card.quality">{{card.quality}}</li>
+        <li ng-show = "card.description">{{card.description}}</li>
+        <li ng-show = "card.attack && card.health">{{card.attack+"/"+card.health}}</li>
+      </ul>
+    </h0>
+  </div>

@@ -1,0 +1,10 @@
+<h1 align="center"> Select a Hero </h1>
+<table align="center" cellpadding="10">
+  <tr ng-repeat="heroRow in hhsCtrl.heroes">
+    <td ng-repeat="hero in heroRow">
+      <p align="center"><img src = {{hero.heroImage}} ng-click="hhsCtrl.setTab(hero.Name)", height="192" width="128"></p>
+      <p align="center"><button class="btn btn-default" ng-click="hhsCtrl.setTab(hero.Name)">{{hero.Name}}</button></p>
+    </td>
+  </tr>
+</table>
+<p align="center"> <button class="btn btn-default" href ng-click="hhsCtrl.setTab(0)"> clear </button> </p>
